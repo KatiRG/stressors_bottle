@@ -1,0 +1,25 @@
+Notes
+http://bottlepy.org/docs/dev/tutorial_app.html
+
+http://pwp.stevecassidy.net/bottle/forms-processing.html
+
+@route('/', method='POST')
+def formhandler():
+    scenario = request.forms.get('scenario')
+
+    # if scenario == 'rcp2.6':
+    # 	picture_name = 'Logo-compact.jpg'
+    
+    message = "Showing maps for scenario " + scenario + ":"
+    
+    return template("scenario_form.tpl", message=message)
+
+
+
+
+
+
+
+<!-- <img src="Logo-compact.jpg" alt="Mountain View" style="width:304px;height:228px;"> -->
+
+<!-- <img src="{{picture}}" style="width:304px;height:228px;"> -->    
