@@ -32,7 +32,8 @@ Embedded python code in template
 
 http://bottlepy.org/docs/dev/stpl.html
 
-Tutorial
---------
+Tutorials
+---------
 http://bottlepy.org/docs/dev/tutorial.html#default-app
+https://realpython.com/blog/python/developing-with-bottle-part-2-plot-ly-api/
 

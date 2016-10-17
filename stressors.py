@@ -16,17 +16,15 @@ def send_image(filename):
 #http://pwp.stevecassidy.net/bottle/forms-processing.html
 @app.route('/')
 def index():
-    # return template("ex_form.tpl", message="Please enter your name")
-    return template("scenario_form.tpl", message="Please select scenario", scenario="", mapFile="")
+    return template("scenario_form.tpl", message="", scenario="")
 
 @app.route('/', method='POST')
 def formhandler():
     scenario = request.forms.get('scenario')
     
-    message = "Showing maps for scenario " + scenario + ":"
-    map_var1 = 'Logo-compact.jpg'
+    message = "Showing maps for scenario " + scenario + ":"    
     
-    return template("scenario_form.tpl", message=message, scenario=scenario, mapFile=map_var1) 
+    return template("scenario_form.tpl", message=message, scenario=scenario) 
 
 @app.route('/help')
 def help():
