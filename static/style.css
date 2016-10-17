@@ -1,0 +1,36 @@
+body {
+    /*font-family: Arial;*/
+    color: #555;
+}
+
+#id-sst {
+	width:204px;
+	height:204px; 
+	position:absolute; 
+	top:180px; 
+	left:30px;
+}
+
+#id-ph {
+	width:204px;
+	height:204px; 
+	position:absolute; 
+	top:180px; 
+	left:560px;
+}
+
+#id-O2 {
+	width:204px;
+	height:204px; 
+	position:absolute; 
+	top:520px; 
+	left:30px;
+}
+
+#id-prod {
+	width:204px;
+	height:204px; 
+	position:absolute; 
+	top:520px; 
+	left:560px;
+}

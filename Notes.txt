@@ -1,6 +1,9 @@
 Notes
 http://bottlepy.org/docs/dev/tutorial_app.html
 
+install bottle:
+$ easy_install bottle
+
 http://pwp.stevecassidy.net/bottle/forms-processing.html
 
 @route('/', method='POST')
@@ -23,3 +26,9 @@ def formhandler():
 <!-- <img src="Logo-compact.jpg" alt="Mountain View" style="width:304px;height:228px;"> -->
 
 <!-- <img src="{{picture}}" style="width:304px;height:228px;"> -->    
+
+Embedded python code in template
+--------------------------------
+
+http://bottlepy.org/docs/dev/stpl.html
+

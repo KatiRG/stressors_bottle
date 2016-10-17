@@ -1,6 +1,11 @@
 import sqlite3
 from bottle import route, run, debug, template, request, static_file
 
+#static files for e.g. css
+@route('/static/<filename>')
+def server_static(filename):
+  return static_file(filename, root='static/')
+
 #http://pwp.stevecassidy.net/bottle/forms-processing.html
 @route('/')
 def index():
