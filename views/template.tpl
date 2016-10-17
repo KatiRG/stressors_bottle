@@ -12,6 +12,9 @@
   <body>
     <div class="container-fluid">
       <h1>Changes in stressor intensity</h1>
+
+      <p>Choose a scenario. Changes in variables SST, pH, O2 and productivity will be displayed below.</p>
+
       <form role="form" action="/" method="post">
         <input type="radio" name="scenario" value="rcp2.6"> RCP 2.6
         <input type="radio" name="scenario" value="rcp4.5"> RCP 4.5
@@ -22,27 +25,23 @@
         <input type="submit" value="Submit" />
       </form>
     
-
     <br>
 
     <p>{{message}}</p>
 
-
-
-    % if scenario == "rcp2.6":
-      <img src="images/Logo-compact.jpg" alt="sst_rcp2.6" style="width:304px;height:304px;">
-    % elif scenario == "rcp8.5": 
+    % if scenario:
+      <!-- Display map image -->
       <div id="id-sst">
-        <img src="images/sst_rcp8.5.jpg" alt="sst_rcp2.6">
+        <img src="images/{{map1}}">
       </div>
       <div id="id-ph">
-        <img src="images/ph_rcp8.5.jpg" alt="ph_rcp2.6">
+        <img src="images/{{map2}}">
       </div>
       <div id="id-O2">  
-        <img src="images/O2_rcp8.5.jpg" alt="O2_rcp2.6">
+        <img src="images/{{map3}}">
       </div>
       <div id="id-prod">  
-        <img src="images/productivity_rcp8.5.jpg" alt="prod_rcp2.6">
+        <img src="images/{{map4}}">
       </div>
     % end
 

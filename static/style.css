@@ -16,7 +16,7 @@ body {
 	width:204px;
 	height:204px; 
 	position:absolute; 
-	top:240px; 
+	top:290px; 
 	left:30px;
 }
 
@@ -24,7 +24,7 @@ body {
 	width:204px;
 	height:204px; 
 	position:absolute; 
-	top:240px; 
+	top:290px; 
 	left:560px;
 }
 
@@ -32,7 +32,7 @@ body {
 	width:204px;
 	height:204px; 
 	position:absolute; 
-	top:660px; 
+	top:710px; 
 	left:30px;
 }
 
@@ -40,6 +40,6 @@ body {
 	width:204px;
 	height:204px; 
 	position:absolute; 
-	top:660px; 
+	top:710px; 
 	left:560px;
 }
