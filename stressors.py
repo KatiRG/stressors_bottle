@@ -1,18 +1,25 @@
 import sqlite3
-from bottle import route, run, debug, template, request, static_file
+from bottle import Bottle, route, run, debug, template, request, static_file
 
-#static files for e.g. css
-@route('/static/<filename>')
+app = Bottle()
+
+#static files for css
+@app.route('/static/<filename>')
 def server_static(filename):
   return static_file(filename, root='static/')
 
+#static files for images
+@app.route('/images/<filename:re:.*\.jpg>')
+def send_image(filename):
+    return static_file(filename, root='images/', mimetype='image/jpg')
+
 #http://pwp.stevecassidy.net/bottle/forms-processing.html
-@route('/')
+@app.route('/')
 def index():
     # return template("ex_form.tpl", message="Please enter your name")
     return template("scenario_form.tpl", message="Please select scenario", scenario="", mapFile="")
 
-@route('/', method='POST')
+@app.route('/', method='POST')
 def formhandler():
     scenario = request.forms.get('scenario')
     
@@ -21,12 +28,7 @@ def formhandler():
     
     return template("scenario_form.tpl", message=message, scenario=scenario, mapFile=map_var1) 
 
-@route('/images/<filename:re:.*\.jpg>')
-def send_image(filename):
-    return static_file(filename, root='images/', mimetype='image/jpg')
-
-
-@route('/help')
+@app.route('/help')
 def help():
 	return static_file('help.html', root='.')
 
@@ -49,4 +51,4 @@ def help():
 debug(True)
 #Start the web server included in Bottle
 #By default, the web server serves the pages on localhost and port 8080
-run(reloader=True)
+app.run(reloader=True)
